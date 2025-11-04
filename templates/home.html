@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,34 +6,83 @@
     <title>Centro de salud y Bienestar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/home.css">
 </head>
-<body>
-    <header class="site-header">
-        <div class="brand">
-            <img src="{% static 'images/logo-mark.svg' %}" alt="Logo" class="brand__logo">
-            <div class="brand__text">
-                <span class="brand__title">Centro de salud y</span>
-                <span class="brand__subtitle">Bienestar</span>
+<body class="page">
+    <div class="page__background">
+        <span class="page__blob page__blob--one"></span>
+        <span class="page__blob page__blob--two"></span>
+        <span class="page__grain"></span>
+    </div>
+    <div class="page__content">
+        <header class="topbar">
+            <div class="brand">
+                <img src="/static/images/logo-mark.svg" alt="Logo Centro de salud y Bienestar" class="brand__logo">
+                <div class="brand__titles">
+                    <span class="brand__name">Centro de salud y</span>
+                    <span class="brand__name brand__name--bold">Bienestar</span>
+                </div>
             </div>
-        </div>
-        <nav class="site-nav">
-            <a href="#">Inicio</a>
-            <a href="#">Valores</a>
-            <a href="#">¿Quiénes somos?</a>
-            <a href="#">Seguimiento</a>
-        </nav>
-    </header>
-    <main class="hero">
-        <section class="hero__content">
-            <h1>Equilibramos tu cuerpo<br>y bienestar.</h1>
-            <p class="hero__description">Atención integral de kinesiología con profesionales expertos dedicados a tu salud física y emocional.</p>
-            <a class="hero__cta" href="#">Reserva tu hora</a>
-        </section>
-        <section class="hero__image-wrapper">
-            <img src="https://images.unsplash.com/photo-1580281658629-6e059732b8f3?auto=format&fit=crop&w=900&q=80" alt="Sesión de kinesiología" class="hero__image">
-        </section>
-    </main>
+            <nav class="topbar__nav" aria-label="Navegación principal">
+                <a class="topbar__link topbar__link--active" href="#">Inicio</a>
+                <a class="topbar__link" href="#valores">Valores</a>
+                <a class="topbar__link" href="#equipo">¿Quiénes somos?</a>
+                <a class="topbar__link" href="#seguimiento">Seguimiento</a>
+            </nav>
+            <a class="topbar__cta" href="#agenda">Agenda tu cita</a>
+        </header>
+
+        <main class="hero" id="inicio">
+            <div class="hero__copy">
+                <span class="hero__eyebrow">Atención integral de kinesiología</span>
+                <h1 class="hero__title">Equilibramos tu cuerpo y bienestar.</h1>
+                <p class="hero__subtitle">
+                    Profesionales expertos dedicados a tu salud física y emocional. Diseñamos planes personalizados
+                    para recuperar tu movimiento y acompañarte en cada etapa del proceso.
+                </p>
+                <div class="hero__actions">
+                    <a class="button button--primary" href="#agenda">Reserva tu hora</a>
+                    <a class="button button--ghost" href="#especialidades">Explorar especialidades</a>
+                </div>
+                <ul class="hero__highlights">
+                    <li class="hero__highlight">
+                        <span class="hero__highlight-icon" aria-hidden="true">✓</span>
+                        <span>+25 kinesiólogos certificados</span>
+                    </li>
+                    <li class="hero__highlight">
+                        <span class="hero__highlight-icon" aria-hidden="true">✓</span>
+                        <span>Planes personalizados y seguimiento digital</span>
+                    </li>
+                    <li class="hero__highlight">
+                        <span class="hero__highlight-icon" aria-hidden="true">✓</span>
+                        <span>Atención presencial y tele-rehabilitación</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hero__visual">
+                <figure class="hero__card hero__card--main">
+                    <img src="https://images.unsplash.com/photo-1580281658629-6e059732b8f3?auto=format&fit=crop&w=1200&q=80" alt="Sesión de kinesiología" class="hero__image">
+                    <figcaption class="hero__caption">
+                        Sesión en box privado con seguimiento personalizado.
+                    </figcaption>
+                </figure>
+                <div class="hero__card hero__card--badge">
+                    <div class="hero__badge-icon">★</div>
+                    <div>
+                        <p class="hero__badge-title">4.9 / 5</p>
+                        <p class="hero__badge-text">Satisfacción promedio de nuestros pacientes</p>
+                    </div>
+                </div>
+                <div class="hero__card hero__card--schedule">
+                    <p class="hero__schedule-title">Próxima disponibilidad</p>
+                    <p class="hero__schedule-day">Martes 10</p>
+                    <p class="hero__schedule-info">09:30 hrs · Box 3</p>
+                    <button class="hero__schedule-button">Reservar cupo</button>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
