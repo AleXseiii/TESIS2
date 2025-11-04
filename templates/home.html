@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de salud y Bienestar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <img src="{% static 'images/logo-mark.svg' %}" alt="Logo" class="brand__logo">
+            <div class="brand__text">
+                <span class="brand__title">Centro de salud y</span>
+                <span class="brand__subtitle">Bienestar</span>
+            </div>
+        </div>
+        <nav class="site-nav">
+            <a href="#">Inicio</a>
+            <a href="#">Valores</a>
+            <a href="#">¿Quiénes somos?</a>
+            <a href="#">Seguimiento</a>
+        </nav>
+    </header>
+    <main class="hero">
+        <section class="hero__content">
+            <h1>Equilibramos tu cuerpo<br>y bienestar.</h1>
+            <p class="hero__description">Atención integral de kinesiología con profesionales expertos dedicados a tu salud física y emocional.</p>
+            <a class="hero__cta" href="#">Reserva tu hora</a>
+        </section>
+        <section class="hero__image-wrapper">
+            <img src="https://images.unsplash.com/photo-1580281658629-6e059732b8f3?auto=format&fit=crop&w=900&q=80" alt="Sesión de kinesiología" class="hero__image">
+        </section>
+    </main>
+</body>
+</html>

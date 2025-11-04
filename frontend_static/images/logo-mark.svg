@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Logo Centro de salud y Bienestar</title>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2f9283" />
+      <stop offset="100%" stop-color="#0f4d3c" />
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#grad)" />
+  <path d="M32 14c-6 7-9 13-9 18 0 6 4 10 9 10s9-4 9-10c0-5-3-11-9-18zm0 32c-4 0-7 3-7 6h14c0-3-3-6-7-6z" fill="#f3f8f6"/>
+</svg>
